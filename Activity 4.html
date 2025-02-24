@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Hands-On Activity</title>
+</head>
+<body>
+    <h1>JavaScript Hands-On Activity</h1>
+
+    <!-- Even/Odd Checker -->
+    <h2>Check if a Number is Even or Odd</h2>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="checkEvenOrOdd()">Check</button>
+    <p id="result"></p>
+
+    <!-- Include JavaScript -->
+    <script>
+        // Function to check if a number is even or odd
+        function checkEvenOrOdd() {
+            const number = parseInt(document.getElementById("numberInput").value);
+            const resultElement = document.getElementById("result");
+
+            if (number % 2 === 0) {
+                resultElement.innerText = `${number} is even.`;
+            } else {
+                resultElement.innerText = `${number} is odd.`;
+            }
+        }
+
+        // Function to print numbers from 1 to 10 in the console
+        function printNumbers() {
+            for (let i = 1; i <= 10; i++) {
+                console.log(i); // Print each number to the console
+            }
+        }
+
+        // Automatically call the printNumbers function when the page loads
+        printNumbers();
+    </script>
+</body>
+</html>
